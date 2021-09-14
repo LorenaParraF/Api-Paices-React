@@ -10,7 +10,7 @@ const PageCountries = (props) => {
   const [namePais, setnamePais] = useState(null);
 
   const dataApiPais = async () => {
-    const response = await fetch(`https://restcountries.eu/rest/v2/all`);
+    const response = await fetch(`https://restcountries.eu/rest/v2/name/${namePais}`);
     const result = await response.json();
     setdatoPais(result);
     console.log(...result);
